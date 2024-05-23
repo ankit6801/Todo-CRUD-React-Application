@@ -1,0 +1,210 @@
+.home{
+    position: relative;
+    min-height: 100vh;
+}
+
+.home::before{
+    content: "";
+    position: fixed;
+    width: 2000px;
+    height: 2000px;
+    top: 0; right: 60%;
+    background-color: var(--clr);
+    transform: rotate(50deg);
+}
+
+/* --------------------- addtodo-------------------------- */
+
+.todocontainer{
+    position: absolute;
+    width: 40%;
+    min-height: 100vh;
+    top: 0; right: 0;
+    padding-top: 5rem;
+}
+
+.entertodo{
+    position: relative;
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 5rem;
+    background-color: #f0f0f0;
+}
+
+.entertodoinput{
+    border: none;
+    outline: none;
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding: 0 4rem 0 2rem;
+    background-color: transparent;
+}
+
+.entertodoicon{
+    position: absolute;
+    right: 0; top: 0;
+    font-size: 2rem;
+    color: #aaa;
+    height: 50px;
+    padding: 0.5rem 1rem 0 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.entertodoicon:hover{
+    transform: scale(1.1);
+}
+
+.entertodo::placeholder{
+    color: #aaa;
+}
+
+/* ------------------------------------------------ */
+
+.homeimg{
+    width: 750px;
+    position: fixed;
+    bottom: 10%; left: 5%;
+}
+
+/* -------------------- profile and logout ------------------------ */
+.profile{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.userlogo{
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.userlogo:hover{
+    background-color: var(--dclr);
+}
+
+.profilehover{
+    padding: 0.15rem 0rem 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(-130%);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.profilehover::selection{
+    background-color: var(--dclr);
+}
+
+.logoutbtn{
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.17rem 0rem 0 1rem;
+    display: block;
+    transition: all 0.5s;
+}
+
+.logoutbtn:hover{
+    color: var(--dclr);
+}
+
+.userlogo:hover ~ .profilehover{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.profilehover:hover{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* --------------------------- todos ----------------------- */
+
+.todo{
+    position: relative;
+    width: 500px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 0.85rem 2rem;
+    color: #555;
+    transition: all 0.5s;
+}
+
+.todo:hover{
+    transform: translateX(-80px) scale(1.1);
+}
+
+.todoicons{
+    position: absolute;
+    top: 0; right: 0%;
+    transition: all 0.5s;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+}
+
+.todo:hover > .todoicons{
+    right: -15%;
+    opacity: 1;
+}
+
+.deletetodo, .updatetodo{
+    cursor: pointer;
+    color: #aaa;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    transition: all 0.5s;
+}
+
+.deletetodo:hover, .updatetodo:hover{
+    color: var(--dclr);
+    transform: scale(1.1);
+}
+
+.confirm-update-todo{
+    font-size: 1.5rem;
+    padding-top: 0.8rem;
+}
+
+
+
+
+
+.checktodo{
+    width: 20px;
+    height: 20px;
+}
+
+.checktodo::checked ~ .demo{
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
